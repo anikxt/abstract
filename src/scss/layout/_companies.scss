@@ -1,0 +1,18 @@
+@use "../misc";
+
+.companies {
+  border-top: 0.1px solid misc.$l-gray;
+  border-bottom: 0.1px solid misc.$l-gray;
+  margin-top: 3rem;
+  padding: 1rem 0;
+  @include misc.fb-c(center, center);
+  @include misc.respond-to("medium") {
+    @include misc.fb-r(center, center);
+  }
+  img {
+    margin: 1rem 0;
+    @include misc.respond-to("medium") {
+      margin: 3rem 2rem;
+    }
+  }
+}

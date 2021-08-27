@@ -1,0 +1,21 @@
+{
+  "name": "abstract",
+  "version": "1.0.0",
+  "description": "Just a static landing page made with HTML, Sass 🤍",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build src/index.html",
+    "dev": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:p014ri5/abstract.git"
+  },
+  "author": "Prasad Narkhede <72374228+p014ri5@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.38.0"
+  }
+}

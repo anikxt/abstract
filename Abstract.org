@@ -1,0 +1,66 @@
+#+TITLE: Abstract
+#+DATE:<2021-08-16 Mon>
+#+AUTHOR: Prasad Narkhede
+#+OPTIONS: toc:nil
+#+EXPORT_FILE_NAME: README
+
+* Abstract
+
+#+begin_quote
+Just a static landing page made with HTML, Sass ❤️
+#+end_quote
+
+** Layout
+#+BEGIN_SRC
+.
+├── src
+│   ├── images
+│   ├── scss
+│   └── index.html
+├── Abstract.org
+├── LICENSE
+├── package.json
+├── README.md
+└── yarn.lock
+
+3 directories, 6 files
+
+#+END_SRC
+
+** Details
+*** Fonts
+**** [[https://fonts.google.com/specimen/Heebo][Heebo]]
+***** Regular 400
+***** Medium 500
+
+**** [[https://fonts.google.com/specimen/IBM+Plex+Sans][IBM Plex Sans]]
+***** Semi-bold 600
+
+*** Hosting
+**** Vercel : https://abstract-landing.vercel.app
+
+** Progress [3/13] [23%]
+*** DONE Setup Project [3/3] [100%]
+- [X] ~npm install sass~
+- [X] ~npm install parcel-bundler~
+- [X] Add scripts for ~build~ and ~dev~
+**** Resources:
+https://www.youtube.com/watch?v=wYWf2m_yzBQ
+*** DONE Navbar [2/2] [100%]
+  + [X] Basic
+  + [X] Responsive
+*** DONE Primary Hero [2/2] [100%]
+  + [X] Basic
+  + [X] Responsive
+*** TODO /Sponsors/
+*** TODO Features
+  + [ ] Primary Features
+  + [ ] Secondary Features
+*** TODO _Pricing_
+*** TODO Testimonials
+*** TODO _FAQ_
+*** TODO _Footer_
+*** TODO ~Animations~
+*** TODO ~Tablet Responsive~
+*** TODO ~Desktop Responsive~
+*** TODO ~Large Screenk Responsive~

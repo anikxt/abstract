@@ -1,0 +1,54 @@
+@use "../misc";
+
+.tagline-wrapper {
+  padding: 4rem 0 2rem 0;
+  text-align: center;
+}
+
+.tagline {
+  margin: 1rem 0;
+}
+
+.tagline-context,
+.hl-content {
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+.highlights {
+  img {
+    max-width: 100%;
+  }
+  @include misc.respond-to("medium") {
+    img {
+      max-width: 50%;
+    }
+  }
+}
+.highlight {
+  margin-top: 2rem;
+  text-align: center;
+  @include misc.fb-c("center", "center");
+  @include misc.respond-to("medium") {
+    @include misc.fb-r("center", "center");
+    flex-direction: row-reverse;
+    &:nth-child(3) {
+      flex-direction: row;
+    }
+  }
+}
+
+.hl-content {
+  max-width: 80%;
+  @include misc.respond-to("medium") {
+    padding-left: 1rem;
+    text-align: left;
+  }
+  @include misc.respond-to("large") {
+    padding-top: 7rem;
+  }
+}
+
+.hl-head {
+  margin-bottom: 1.5rem;
+}

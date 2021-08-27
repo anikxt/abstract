@@ -1,0 +1,25 @@
+@use "./breakpoints";
+@mixin fb-r($justify, $align) {
+  display: flex;
+  flex-direction: row;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin fb-c($justify, $align) {
+  display: flex;
+  flex-direction: column;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key(breakpoints.$breakpoints, $breakpoint) {
+    @media (min-width: map-get(breakpoints.$breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys(breakpoints.$breakpoints)}.";
+  }
+}

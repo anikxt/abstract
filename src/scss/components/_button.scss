@@ -1,0 +1,20 @@
+@use "../misc";
+
+.btn {
+  padding: 0.5rem 2rem;
+  color: white;
+}
+
+.btn-primary {
+  background-color: misc.$primary;
+}
+
+.btn-dark {
+  background-color: white;
+  color: misc.$dark !important;
+  @include misc.respond-to("large") {
+    background-color: misc.$dark;
+    color: white !important;
+    padding: 0.35rem 2rem;
+  }
+}

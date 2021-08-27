@@ -1,0 +1,42 @@
+@use "../misc";
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 2.5rem;
+  @include misc.respond-to("medium") {
+    font-size: 2.75rem;
+  }
+  line-height: 3.375rem;
+}
+
+h2 {
+  font-size: 2rem;
+  @include misc.respond-to("medium") {
+    font-size: 2.25rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  @include misc.respond-to("medium") {
+    font-size: 2rem;
+  }
+}
+
+.logo-text {
+  font-size: 2rem;
+}
+
+p {
+  color: misc.$gray;
+  font-size: 1.25rem;
+}
+
+.container {
+  margin: 0 auto;
+  color: misc.$dark;
+  max-width: map-get(misc.$breakpoints, "x-large");
+}

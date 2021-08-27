@@ -1,0 +1,93 @@
+@use "../misc";
+.navbar {
+  padding: 1rem 1rem;
+  background-color: transparent;
+  @include misc.fb-r(space-between, center);
+}
+
+.logo {
+  @include misc.fb-r(flex-start, center);
+  & .logo-text {
+    margin: 0 1rem;
+  }
+}
+
+.hamburger {
+  @include misc.respond-to("large") {
+    display: none;
+  }
+  transition: all 0.5s linear;
+  cursor: pointer;
+  span {
+    display: block;
+    background-color: misc.$dark;
+    width: 2rem;
+    height: 0.25rem;
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+  &.active {
+    z-index: 5;
+    position: relative;
+    span {
+      background-color: white;
+    }
+    span:nth-child(1) {
+      position: absolute;
+      top: 50%;
+      transform: rotate(45deg);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      position: absolute;
+      top: 50%;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.nav-links {
+  display: none;
+  a:hover {
+    border-bottom: solid 2px;
+  }
+  @include misc.respond-to("large") {
+    display: flex;
+    li {
+      display: inline;
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+      a {
+        color: misc.$dark;
+      }
+    }
+  }
+  &.active {
+    display: block;
+    animation: slide-down 400ms linear;
+    background-color: rgba(misc.$dark, 0.95);
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    height: 100vh;
+    inset: 0;
+    font-size: 1.5rem;
+    a {
+      color: white;
+      transition: all 100ms ease-in-out;
+      &:hover {
+        font-size: 1.75rem;
+      }
+    }
+    ul {
+      margin-top: 25vh;
+    }
+    li:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+}
